@@ -1,1 +1,8 @@
-@import "../../utilities/variables.scss";
+@use "../../utilities/variables" as variables;
+
+body {
+  //alias.$variable-name
+  font-weight: variables.$color-inverse-on-surface-dark;
+
+  @include variables.display-large;
+}
