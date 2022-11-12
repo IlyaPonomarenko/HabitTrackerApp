@@ -1,1 +1,8 @@
-@import "../../utilities/variables.scss";
+@use "../../utilities/variables" as variables;
+
+body {
+  //alias.$variable-name
+  font-weight: variables.$typescale-body-large-weight;
+
+  @include variables.display-large;
+}

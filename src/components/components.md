@@ -4,10 +4,16 @@ All stateless components belong here
 
 ## how to import colors and fonts?
 
-Inside scss import /utilities/variables/
+Inside scss import /utilities/variables/ with '@use'
 
 ```
-@import '../../utilities/variables/
+@use '../../utilities/variables/ as variables;
+```
+
+## hot to use imported fonts?
+
+```
+font-weight: variables.$typescale-body-large-weight;
 ```
 
 ## how to use mixins?
@@ -15,5 +21,5 @@ Inside scss import /utilities/variables/
 Using include inside scss
 
 ```
-@include MixinName
+@include variables.display-large;
 ```
