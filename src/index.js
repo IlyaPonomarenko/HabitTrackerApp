@@ -6,7 +6,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 /* Import Pages */
 import App from "./App";
+/* Will be changed to ./containers/Habits/Habits */
 import Habits from "./containers/HabitsPlaceholder/Habits";
+/* Should be changed to ./containers/Journal/Journal */
 import Journal from "./JournalMain";
 import Tasks from "./containers/Tasks/Tasks";
 import Error404 from "./components/Error404/Error404";
