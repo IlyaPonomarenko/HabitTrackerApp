@@ -1,8 +1,9 @@
 import "./App.scss";
+import Habits from "./containers/Habits/HabitsTab/Habits";
 
 function App() {
   return <div className="App">
-    helllo
+  <Habits></Habits>
   </div>;
 }
 

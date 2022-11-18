@@ -1,0 +1,34 @@
+.habits-frame{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 1360px;
+    height:900px
+}
+.habits-tab{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 340px;
+    height: 900px;
+    background: linear-gradient(0deg, rgba(208, 188, 255, 0.05), rgba(208, 188, 255, 0.05)), #1C1B1F;
+    &__headline {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 8px 8px 16px;
+        gap: 10px;
+        height: 56px;
+      }
+}
+.habits-calendar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 900px;
+    background: #1C1B1F;
+}
+h1{
+    color: white;
+}
