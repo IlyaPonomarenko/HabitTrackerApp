@@ -11,12 +11,13 @@ const TasksSidebarTab = ({
   children = "Tasks Sidebar Tab",
   type = "button",
   tasksCounter = "123",
+  icon = "circle",
 }) => {
   return (
     <button className="tasks-sidebar-tab" onClick={onTabClick} type={type}>
       <div className="tasks-sidebar-tab__wrapper">
         {/* TODO: add google icon */}
-        <div className="tasks-sidebar-tab__icon">O</div>
+        <span className="material-icons">{icon}</span>
         {/* Displays button text */}
         <div className="tasks-sidebar-tab__children">{children}</div>
       </div>

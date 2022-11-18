@@ -6,8 +6,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 /* Import Pages */
 import App from "./App";
-import Habits from "./containers/Habits/Habits";
-import Journal from "./containers/Journal/Journal";
+import Habits from "./containers/HabitsPlaceholder/Habits";
+import Journal from "./JournalMain";
 import Tasks from "./containers/Tasks/Tasks";
 import Error404 from "./components/Error404/Error404";
 
@@ -22,7 +22,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route path="/" element={<Habits />} />
         <Route path="journal" element={<Journal />} />
-        <Route path="birds" element={<Tasks />} />
+        <Route path="tasks" element={<Tasks />} />
       </Route>
       {/* TODO: Replace with actual 404 page */}
       <Route path="*" element={<Error404 />} />

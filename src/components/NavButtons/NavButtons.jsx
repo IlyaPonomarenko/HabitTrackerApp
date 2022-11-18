@@ -6,10 +6,15 @@ import { NavLink } from "react-router-dom";
 TODO: integrate NavLinks 
 */
 
-const NavButtons = ({ onButtonClick, children = "Nav Button", linkTo }) => {
+const NavButtons = ({
+  onButtonClick,
+  children = "Nav Button",
+  linkTo,
+  icon,
+}) => {
   return (
     <NavLink to={linkTo} className="navButton" onClick={onButtonClick}>
-      <div className="navButton__icon">O</div>
+      <span className="material-icons">{icon}</span>
       {children}
     </NavLink>
   );

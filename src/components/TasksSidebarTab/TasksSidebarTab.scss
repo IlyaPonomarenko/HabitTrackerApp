@@ -6,6 +6,7 @@
   padding: 16px 24px 16px 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: v.$color-surface-1-dark;
   width: 100%;
   height: 56px;
@@ -24,5 +25,9 @@
   &:active {
     background-color: v.$color-secondary-container-dark;
     color: v.$color-on-secondary-container-dark;
+  }
+  .material-icons {
+    max-width: 18px;
+    max-height: 18px;
   }
 }

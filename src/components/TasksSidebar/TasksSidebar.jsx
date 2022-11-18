@@ -7,7 +7,9 @@ const TasksSidebar = ({ onButtonClick, onTabClick, tasksCounter }) => {
   return (
     <div className="tasks-sidebar">
       <div className="tasks-sidebar__button-wrapper">
-        <Button onButtonClick={onButtonClick}>New Task Group</Button>
+        <Button onButtonClick={onButtonClick} icon={"add"}>
+          New Task Group
+        </Button>
       </div>
       <div className="tasks-sidebar__tab-wrapper">
         {/* Placeholder Start */}
@@ -15,6 +17,7 @@ const TasksSidebar = ({ onButtonClick, onTabClick, tasksCounter }) => {
           type={"button"}
           tasksCount={tasksCounter}
           onTabClick={onTabClick}
+          icon={"school"}
         >
           School
         </TasksSidebarTab>
@@ -22,6 +25,7 @@ const TasksSidebar = ({ onButtonClick, onTabClick, tasksCounter }) => {
           type={"button"}
           tasksCount={tasksCounter}
           onTabClick={onTabClick}
+          icon={"work"}
         >
           Work
         </TasksSidebarTab>
@@ -29,6 +33,7 @@ const TasksSidebar = ({ onButtonClick, onTabClick, tasksCounter }) => {
           type={"button"}
           tasksCount={tasksCounter}
           onTabClick={onTabClick}
+          icon={"personal"}
         >
           Personal
         </TasksSidebarTab>
@@ -36,6 +41,7 @@ const TasksSidebar = ({ onButtonClick, onTabClick, tasksCounter }) => {
           type={"button"}
           tasksCount={tasksCounter}
           onTabClick={onTabClick}
+          icon={"money"}
         >
           Finances
         </TasksSidebarTab>

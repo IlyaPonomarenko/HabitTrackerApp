@@ -9,16 +9,26 @@ TODO: Create navButtons with a map that iterates through an array of addresses
 const Navbar = ({ onButtonClick }) => {
   return (
     <div className="navbar">
-      <div className="navbar__icon">O</div>
+      <div className="navbar__icon">
+        <span class="material-icons">settings</span>
+      </div>
       <nav className="navbar__button-wrapper">
-        <NavButtons linkTo={"/"} onButtonClick={onButtonClick}>
-          Habits
+        <NavButtons
+          icon={"calendar_month"}
+          linkTo={"journal"}
+          onButtonClick={onButtonClick}
+        >
+          Journal
         </NavButtons>
-        <NavButtons linkTo={"tasks"} onButtonClick={onButtonClick}>
+        <NavButtons
+          icon={"check_box"}
+          linkTo={"tasks"}
+          onButtonClick={onButtonClick}
+        >
           Tasks
         </NavButtons>
-        <NavButtons linkTo={"journal"} onButtonClick={onButtonClick}>
-          Journal
+        <NavButtons icon={"edit"} linkTo={"/"} onButtonClick={onButtonClick}>
+          Habits
         </NavButtons>
       </nav>
     </div>

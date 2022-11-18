@@ -1,12 +1,13 @@
 @use "../../utilities/variables/" as v;
 
 .navbar {
+  position: absolute;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   height: 80px;
 
-  width: calc(100vh - 109px);
+  width: calc(100vh);
   padding: 0 44px 0 65px;
   background-color: v.$color-surface-dark;
   color: v.$color-on-surface-variant-dark;
