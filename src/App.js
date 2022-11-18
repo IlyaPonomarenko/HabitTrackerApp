@@ -1,7 +1,14 @@
 import "./App.scss";
+import JournalMain from "./JournalMain";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <div className="App">
+        <JournalMain />
+      </div>
+    </div>
+  );
 }
 
 export default App;
