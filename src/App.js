@@ -1,12 +1,12 @@
 import "./App.scss";
-import JournalMain from "./JournalMain";
+import { Outlet } from "react-router";
+import Navbar from "./components/NavBar/Navbar";
 
 function App() {
   return (
     <div>
-      <div className="App">
-        <JournalMain />
-      </div>
+      <Navbar />
+      <Outlet />
     </div>
   );
 }

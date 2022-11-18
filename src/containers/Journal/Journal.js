@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import DiaryForm from "../components/DiaryForm";
-import DiaryItem from "../components/DiaryItem";
-import { addItem } from "../redux/actions";
+import DiaryForm from "../../components/DiaryForm/DiaryForm";
+import DiaryItem from "../../components/DiaryItem/DiaryItem";
+import { addItem } from "../../redux/actions";
 import Modal from "react-bootstrap/Modal";
 
 export class Journal extends Component {
