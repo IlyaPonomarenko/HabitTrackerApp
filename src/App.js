@@ -1,10 +1,14 @@
 import "./App.scss";
-import Habits from "./containers/Habits/HabitsTab/Habits";
+import { Outlet } from "react-router";
+import Navbar from "./components/NavBar/Navbar";
 
 function App() {
-  return <div className="App">
-  <Habits></Habits>
-  </div>;
+  return (
+    <div className="App">
+      <Navbar />
+      <Outlet />
+    </div>
+  );
 }
 
 export default App;

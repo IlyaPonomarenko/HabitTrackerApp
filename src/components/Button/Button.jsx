@@ -7,12 +7,13 @@ const Button = ({
   children = "button",
   type = "button",
   variant,
+  icon,
 }) => {
   /* Checks if variant equals alert, if so adds className */
   variant = variant === "alert" ? "button--alert button" : "button";
   return (
     <button type={type} onClick={onButtonClick} className={variant}>
-      <div className="button__icon">O</div>
+      <span className="material-icons">{icon}</span>
       {/* TODO add google icon */}
       {children}
     </button>

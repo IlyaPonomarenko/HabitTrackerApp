@@ -11,16 +11,22 @@
   color: v.$color-on-secondary-container-dark;
   padding: 0 29px;
   border-radius: 16px 16px 0 0;
+  text-decoration: none;
 
   /* 
   TODO: add state colors, add focused state
   */
 
   &:hover {
+    color: v.$color-on-secondary-container-dark;
+    height: 44px;
     padding-bottom: 4px;
     cursor: pointer;
   }
   &:active {
+    height: 56px;
+  }
+  &:focus {
     height: 56px;
   }
 }

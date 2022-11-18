@@ -1,6 +1,7 @@
 @use "../../utilities/variables/" as v;
 
 .tasks-sidebar {
+  position: relative;
   flex-direction: column;
   width: 340px;
   height: 100vh;
