@@ -7,7 +7,7 @@ All stateless components belong here
 Inside scss import /utilities/variables/ with '@use'
 
 ```
-@use '../../utilities/variables/ as variables;
+@use '../../utilities/variables/' as variables;
 ```
 
 ## hot to use imported fonts?

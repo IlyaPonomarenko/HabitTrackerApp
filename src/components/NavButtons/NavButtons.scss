@@ -1,0 +1,26 @@
+@use "../../utilities/variables/" as v;
+
+.navButton {
+  @include v.label-large;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  height: 40px;
+  background-color: v.$color-secondary-container-dark;
+  color: v.$color-on-secondary-container-dark;
+  padding: 0 29px;
+  border-radius: 16px 16px 0 0;
+
+  /* 
+  TODO: add state colors, add focused state
+  */
+
+  &:hover {
+    padding-bottom: 4px;
+    cursor: pointer;
+  }
+  &:active {
+    height: 56px;
+  }
+}
