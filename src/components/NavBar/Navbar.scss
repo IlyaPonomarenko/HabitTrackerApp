@@ -1,0 +1,28 @@
+@use "../../utilities/variables/" as v;
+
+.navbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80px;
+
+  width: calc(100vh - 109px);
+  padding: 0 44px 0 65px;
+  background-color: v.$color-surface-dark;
+  color: v.$color-on-surface-variant-dark;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: left top;
+
+  &__button-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  &__icon {
+    width: 58px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+  }
+}

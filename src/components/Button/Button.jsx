@@ -1,14 +1,22 @@
 import React from "react";
+import "./Button.scss";
 
-const Card = () => {
+/* Innitialized defaults for each value, will be overwritten if value is passed in */
+const Button = ({
+  onButtonClick,
+  children = "button",
+  type = "button",
+  variant,
+}) => {
+  /* Checks if variant equals alert, if so adds className */
+  variant = variant === "alert" ? "button--alert button" : "button";
   return (
-    <div className="card">
-      <div className="card__h1">test</div>
-      <div className="card__wrapper">
-        <h1 className="card__h1--error">test</h1>
-      </div>
-    </div>
+    <button type={type} onClick={onButtonClick} className={variant}>
+      <div className="button__icon">O</div>
+      {/* TODO add google icon */}
+      {children}
+    </button>
   );
 };
 
-export default Card;
+export default Button;

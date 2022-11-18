@@ -1,8 +1,32 @@
-@use "../../utilities/variables" as variables;
+@use "../../utilities/variables/" as v;
+@import "../../utilities/variables.scss";
 
-body {
-  //alias.$variable-name
-  font-weight: variables.$color-inverse-on-surface-dark;
-
-  @include variables.display-large;
+.button {
+  @include v.label-large;
+  display: flex;
+  gap: 8px;
+  color: v.$color-on-secondary-container-dark;
+  background-color: v.$color-secondary-container-dark;
+  height: 40px;
+  padding: 10px 24px 10px 16px;
+  border-radius: 100px;
+  border: none;
+  &:hover {
+    opacity: 0.92;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+      0px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  &:focus {
+    opacity: 0.88;
+  }
+  &:active {
+    opacity: 0.88;
+  }
+  &:disabled {
+    color: v.$color-on-surface-dark;
+  }
+  &--alert {
+    background-color: v.$color-error-dark;
+    color: v.$color-on-error-dark;
+  }
 }
