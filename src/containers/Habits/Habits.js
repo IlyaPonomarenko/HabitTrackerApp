@@ -1,5 +1,5 @@
 import React from "react";
-import HabitGroup from "../HabitGroup/HabitGroup";
+import HabitGroup from "../../components/HabitGroup/HabitGroup";
 import "./Habits.scss";
 const Habits = () => {
 return (
