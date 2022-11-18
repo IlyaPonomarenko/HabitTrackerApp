@@ -12,6 +12,7 @@
     width: 340px;
     height: 900px;
     background: linear-gradient(0deg, rgba(208, 188, 255, 0.05), rgba(208, 188, 255, 0.05)), #1C1B1F;
+    margin-left: 80px;
     &__headline {
         display: flex;
         flex-direction: row;
@@ -38,12 +39,11 @@
 }
 .day{
     display: flex;
-    
     align-items: center;
     color: aliceblue;
-
     height: 50px;
 }
-h1{
-    color: white;
+.h1-habit{
+    color: whitesmoke;
+    font-size: 17px;
 }

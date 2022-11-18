@@ -5,7 +5,7 @@ const HabitGroup = () => {
 return (
     <div>
         <div className="habitGroup-title">
-            <h1>Habit group title</h1>
+            <h1 className="h1-habit">Habit group title</h1>
         </div>
             <div className="habitGroup-list">
                 <HabitGroupEntry></HabitGroupEntry>

@@ -6,7 +6,7 @@ return (
     <div className="habits-frame">
         <div className="habits-tab">
             <div className="habits-tab__headline">
-                <h1>All Habits</h1>
+                <h1 className="h1-habit">All Habits</h1>
             </div>
             <HabitGroup></HabitGroup>
             <HabitGroup></HabitGroup>
