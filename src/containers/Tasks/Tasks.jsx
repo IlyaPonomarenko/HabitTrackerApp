@@ -1,13 +1,18 @@
 import "./Tasks.scss";
-import React from "react";
+import React, { Component } from "react";
 import TasksSidebar from "../../components/TasksSidebar/TasksSidebar";
+import TasksMain from "../../components/TasksMain/TasksMain";
 
-const Tasks = () => {
-  return (
-    <div className="tasks">
-      <TasksSidebar />
-    </div>
-  );
-};
+class Tasks extends Component {
+  state = {};
+  render() {
+    return (
+      <div className="tasks">
+        <TasksSidebar />
+        <TasksMain />
+      </div>
+    );
+  }
+}
 
 export default Tasks;
