@@ -1,17 +1,21 @@
 import "./TasksMain.scss";
-import React from "react";
+import React, { Component } from "react";
 import TasksHeader from "../TasksHeader/TasksHeader";
 import Button from "../Button/Button";
+import TasksTask from "../TasksTask/TasksTask";
 
-const TasksMain = () => {
-  return (
-    <div className="tasks-main">
-      <div className="tasks-main__button-wrapper">
-        <Button icon={"add"}>New Task</Button>
+class TasksMain extends Component {
+  render() {
+    return (
+      <div className="tasks-main">
+        <div className="tasks-main__button-wrapper">
+          <Button icon={"add"}>New Task</Button>
+        </div>
+        <TasksHeader variant={"toggle"}>Tasks</TasksHeader>
+        <TasksTask />
       </div>
-      <TasksHeader variant={"toggle"}>Important</TasksHeader>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default TasksMain;

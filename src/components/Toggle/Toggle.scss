@@ -1,0 +1,37 @@
+@use "../../utilities/variables/" as v;
+
+.toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  width: 52px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: v.$color-surface-variant-dark;
+  border: 2px v.$color-outline-dark solid;
+  &__knob {
+    background-color: v.$color-outline-dark;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+  &--selected {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 4px;
+    width: 52px;
+    height: 32px;
+    border-radius: 100px;
+    background-color: v.$color-primary-dark;
+    border: none;
+    &__knob {
+      background-color: v.$color-on-primary-dark;
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+    }
+  }
+}

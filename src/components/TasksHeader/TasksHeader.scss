@@ -12,24 +12,4 @@
     font-weight: 400;
     color: v.$color-on-surface-dark;
   }
-  &__toggle {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 6px;
-    width: 52px;
-    height: 32px;
-    border-radius: 100px;
-    background-color: v.$color-surface-variant-dark;
-    border: 2px v.$color-outline-dark solid;
-    &--hidden {
-      display: none;
-    }
-  }
-  &__toggle-knob {
-    background-color: v.$color-outline-dark;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-  }
 }

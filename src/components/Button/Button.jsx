@@ -14,7 +14,6 @@ const Button = ({
   return (
     <button type={type} onClick={onButtonClick} className={variant}>
       <span className="material-icons">{icon}</span>
-      {/* TODO add google icon */}
       {children}
     </button>
   );
