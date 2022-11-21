@@ -51,7 +51,7 @@ class Tasks extends Component {
   async GetRemoteData(){
     try{
       const testTasksRef = collection(database, "users/testUser/tasks"); //Fetches Tasks collection which contains task groups as individual documents
-      const testTaskGroupDOCS = await getDocs(testTasksRef);
+      const testTaskGroupDOCS = await getDocs(testTasksRef); //To be unpacked to reassembled into class instances. After that, to be passed as props.
       console.log(testTasksRef);
       console.log(testTaskGroupDOCS.docs[0].data());
     } catch {
