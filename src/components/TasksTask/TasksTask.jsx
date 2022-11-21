@@ -6,7 +6,7 @@ import Checkbox from "../Checkbox/Checkbox";
 const TasksTask = ({
   taskDate = "Enter Date Here",
   taskTitle = "Task Title",
-  taskIsActive = false,
+  taskIsActive = true,
   onTaskClick,
   taskContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quasi blanditiis id quisquam repellendus ipsa iusto fugit laboriosam, ad nostrum.",
   taskDaysMissed = 3,
