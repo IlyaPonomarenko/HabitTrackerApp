@@ -10,7 +10,14 @@ const Button = ({
   icon,
 }) => {
   /* Checks if variant equals alert, if so adds className */
-  variant = variant === "alert" ? "button--alert button" : "button";
+  variant =
+    variant === "alert"
+      ? "button--alert button"
+      : variant === "primary"
+      ? "button--primary button"
+      : variant === "text-only"
+      ? "button--text-only button"
+      : "button";
   return (
     <button type={type} onClick={onButtonClick} className={variant}>
       <span className="material-icons">{icon}</span>

@@ -6,6 +6,7 @@ const Toggle = ({ toggled }) => {
   /* TODO: State will have to be bassed to parent */
   const defaultToggled = toggled ? toggled : false;
   const [isToggled, setIsToggled] = useState(defaultToggled);
+
   return (
     <>
       {isToggled ? (

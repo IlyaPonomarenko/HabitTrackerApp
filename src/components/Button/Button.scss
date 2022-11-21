@@ -20,7 +20,7 @@
     opacity: 0.88;
   }
   &:active {
-    opacity: 0.88;
+    opacity: 0.78;
   }
   &:disabled {
     color: v.$color-on-surface-dark;
@@ -28,5 +28,26 @@
   &--alert {
     background-color: v.$color-error-dark;
     color: v.$color-on-error-dark;
+  }
+  &--primary {
+    background-color: v.$color-primary-dark;
+    color: v.$color-on-primary-dark;
+  }
+  &--text-only {
+    color: v.$color-primary-dark;
+    background-color: #353336;
+    &:hover {
+      background-color: #423e46;
+      border: none;
+      box-shadow: none;
+    }
+    &:focus,
+    &:active {
+      background-color: #48444e;
+      color: v.$color-primary-dark;
+    }
+    &:disabled {
+      color: v.$color-on-surface-dark;
+    }
   }
 }
