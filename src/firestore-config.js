@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection, doc } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDREpOEaT1zUyylHDOBcLPhNLc5mN5CfeI",
@@ -12,7 +12,27 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const database = getFirestore(app);
+export const userDoc = GetUserData();
+export const tasks_collection = GetRemoteTaskData();
 
+async function GetUserData()
+{
+    try{
+        const userDoc = doc(database, "users/testUser"); // DEBUG, "testUser" should be replaced with a valid UID
+        return userDoc;
+    } catch{
+        console.log("Failed to get remote user data :: GetUserData() :: firestore-config.js");
+    }
+}
+
+async function GetRemoteTaskData(){
+    try{
+      const testTasksRef = collection(database, "users/testUser/tasks");
+      return testTasksRef;
+    } catch {
+      console.log("Failed to get remote TASKS data :: GetRemoteTaskData() :: firestore-config.js");
+    }
+  }
 // async function TestingDataMovement()
 // {
 //   try{

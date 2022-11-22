@@ -1,7 +1,7 @@
 import "./Tasks.scss";
 import React, { Component } from "react";
-import {database} from "../../firestore-config";
-import { collection, getDocs } from "firebase/firestore";
+import { database, tasks_collection } from "../../firestore-config";
+import { collection, doc, setDoc } from "firebase/firestore"; 
 import TasksSidebar from "../../components/TasksSidebar/TasksSidebar";
 import TasksMain from "../../components/TasksMain/TasksMain";
 
@@ -22,11 +22,11 @@ class TaskEntry
 
 class TaskGroup
 {
-  constructor()
+  constructor(id = "")
   {
-    this.id = "";
+    this.id = id;
     this.userTasks = [];
-    this.taskGroupTitle = "Sport";
+    this.title = "Sport"
   }
   //CreateTaskEntry();
   //UpdateGroupData();
@@ -35,28 +35,45 @@ class TaskGroup
 class Tasks extends Component {
   constructor() {
     super();
-    this.GetRemoteData = this.GetRemoteData.bind(this);
+    this.taskDocuments = [];
+    this.CreateTaskGroup = this.CreateTaskGroup.bind(this);
+    this.UpdateRemote = this.UpdateRemote.bind(this);
+    this.state = {
+      taskGroups : [],
+      selectedTaskGroup : null
+    };
   }  
-  state = {};
+  
   render() {
-    this.GetRemoteData();
     return (
       <div className="tasks">
-        <TasksSidebar />
+        <TasksSidebar onButtonClick={this.CreateTaskGroup}/>
         <TasksMain />
       </div>
     );
   }
 
-  async GetRemoteData(){
-    try{
-      const testTasksRef = collection(database, "users/testUser/tasks"); //Fetches Tasks collection which contains task groups as individual documents
-      const testTaskGroupDOCS = await getDocs(testTasksRef); //To be unpacked to reassembled into class instances. After that, to be passed as props.
-      console.log(testTasksRef);
-      console.log(testTaskGroupDOCS.docs[0].data());
-    } catch {
-      console.log("Failed to get task info");
-    }
+  async CreateTaskGroup()
+  {
+    const newTaskGroup = doc(collection(database, "users", "testUser", "tasks"));
+    this.taskDocuments = [...this.taskDocuments, newTaskGroup];
+    this.setState({taskGroups : [...this.state.taskGroups, new TaskGroup(newTaskGroup.id)]});
+  }
+
+  async UpdateRemote(taskDocuments)
+  {
+    this.state.taskGroups.forEach(function(group){
+      const tempDoc = taskDocuments.find(doc => doc.id === group.id)
+      setDoc(tempDoc, {
+        id: group.id,
+        title: group.title
+      }, {merge : true});
+    });
+  }
+
+  componentDidUpdate()
+  {
+    this.UpdateRemote(this.taskDocuments); 
   }
 }
 
