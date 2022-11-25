@@ -1,0 +1,24 @@
+@use "../../utilities/variables/" as v;
+.input {
+  color-scheme: dark;
+  &__label {
+    @include v.body-small;
+    color: v.$color-on-primary-container-dark;
+    position: relative;
+    top: 8px;
+    left: 12px;
+    padding: 0 4px;
+    background-color: v.$color-background-dark;
+  }
+  &__field {
+    box-sizing: border-box;
+    @include v.body-large;
+    height: 56px;
+    width: 100%;
+    padding: 8px 0 8px 16px;
+    border-radius: 4px;
+    border: 1px solid v.$color-outline-dark;
+    background-color: transparent;
+    color: v.$color-on-surface-dark;
+  }
+}
