@@ -1,11 +1,11 @@
 import React from "react";
 import HabitGroupEntry from "../HabitGroupEntry/HabitGroupEntry";
 import "./HabitGroup.scss";
-const HabitGroup = () => {
+const HabitGroup = (props) => {
 return (
     <div>
         <div className="habitGroup-title">
-            <h1 className="h1-habit">Habit group title</h1>
+            <h3 className="h1-habit">Habit group title</h3>
         </div>
             <div className="habitGroup-list">
                 <HabitGroupEntry></HabitGroupEntry>
