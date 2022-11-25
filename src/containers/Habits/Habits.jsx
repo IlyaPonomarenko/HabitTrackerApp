@@ -3,7 +3,6 @@ import HabitGroup from "../../components/HabitGroup/HabitGroup";
 import Button from "../../components/Button/Button"
 import "./Habits.scss";
 
-
 class Habits extends Component {
   state={
     habitGroups:[],
