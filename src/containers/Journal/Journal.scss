@@ -1,0 +1,13 @@
+@use "../../utilities/variables/" as v;
+
+.journals {
+  margin-left: 80px;
+}
+
+.journal-form {
+  @include v.label-large;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 71%;
+}

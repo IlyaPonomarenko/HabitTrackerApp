@@ -9,7 +9,7 @@ import App from "./App";
 /* Will be changed to ./containers/Habits/Habits */
 import Habits from "./containers/HabitsPlaceholder/Habits";
 /* Will be changed to ./containers/Journal/Journal */
-import Journal from "./JournalMain";
+import Journal from "./containers/Journal/Journal";
 import Tasks from "./containers/Tasks/Tasks";
 import Error404 from "./components/Error404/Error404";
 

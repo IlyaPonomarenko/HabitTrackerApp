@@ -1,0 +1,18 @@
+@use "../../utilities/variables/" as v;
+
+.text-area-container {
+  border-radius: 5px;
+  background-color: v.$color-secondary-container-dark;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.text-area {
+  width: 700px;
+  height: 120px;
+  border-radius: 5px;
+  border: none;
+  background-color: v.$color-secondary-container-dark;
+  color: v.$color-on-surface-variant-dark;
+  outline: none;
+}

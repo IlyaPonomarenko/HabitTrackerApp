@@ -1,0 +1,16 @@
+@use "../../utilities/variables/" as v;
+
+.journal-sidebar {
+  position: relative;
+  flex-direction: column;
+  width: 340px;
+  height: 100vh;
+  padding: 12px;
+  background-color: v.$color-surface-1-dark;
+  &__button-wrapper {
+    margin: 0 0 0 auto;
+    justify-content: end;
+    width: max-content;
+    padding: 12px;
+  }
+}
