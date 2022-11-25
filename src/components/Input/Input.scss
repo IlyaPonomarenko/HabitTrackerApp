@@ -1,6 +1,8 @@
 @use "../../utilities/variables/" as v;
 .input {
+  height: fit-content;
   color-scheme: dark;
+  padding: 4px 24px;
   &__label {
     @include v.body-small;
     color: v.$color-on-primary-container-dark;

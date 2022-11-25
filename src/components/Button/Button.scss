@@ -35,7 +35,7 @@
   }
   &--text-only {
     color: v.$color-primary-dark;
-    background-color: #353336;
+    background-color: transparent;
     &:hover {
       background-color: #423e46;
       border: none;
