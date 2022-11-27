@@ -9,7 +9,7 @@ class Journal extends Component {
       <div className="journals">
         <JournalSidebar />
 
-        <div className="journal-form">
+        <div className="journal">
           {" "}
           <JournalForm />
         </div>
