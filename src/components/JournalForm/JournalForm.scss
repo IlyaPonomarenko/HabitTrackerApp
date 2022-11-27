@@ -1,14 +1,15 @@
 @use "../../utilities/variables/" as v;
 
-h1 {
+.entry-name {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin: 10px;
 }
 
 .journal-form {
   display: flex;
   justify-content: center;
-  max-width: 100%;
+  align-items: stretch;
+  min-width: 50vh;
   height: 100vh;
   background-color: v.$color-surface-dark;
   color: v.$color-on-surface-variant-dark;
@@ -16,20 +17,15 @@ h1 {
 
 .form-container {
   flex-direction: column;
-  max-width: 80%;
+  width: 80%;
   height: 90vh;
   background-color: v.$color-surface-dark;
   padding: 20px;
-  margin: 20px;
+  margin: 0px;
 }
 
 .mood-busy-container {
   display: grid;
   grid-template-columns: 3fr 3fr;
-}
-
-.mood-container,
-.busy-container {
-  width: 350px;
-  margin: 5px;
+  gap: 5px;
 }

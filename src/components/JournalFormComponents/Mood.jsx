@@ -10,6 +10,9 @@ class Mood extends Component {
         <div>
           <h4>How is your mood?</h4>
         </div>
+        <div className="moodContainer__value">
+          <span>{this.state.values}</span>
+        </div>
         <Range
           step={0.1}
           min={0}
@@ -17,11 +20,13 @@ class Mood extends Component {
           values={this.state.values}
           onChange={(values) => this.setState({ values })}
           renderTrack={({ props, children }) => (
-            <div className="moodBar" {...props}>
+            <div className="moodContainer__moodBar" {...props}>
               {children}
             </div>
           )}
-          renderThumb={({ props }) => <div className="moodThumb" {...props} />}
+          renderThumb={({ props }) => (
+            <div className="moodContainer__moodThumb" {...props} />
+          )}
         />{" "}
       </div>
     );

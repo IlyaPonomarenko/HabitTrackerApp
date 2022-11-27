@@ -10,7 +10,7 @@ const JournalForm = () => {
     <div className="journal-form">
       <div className="form-container">
         <div>
-          <h1 className="diary-name">Journal item 1</h1>
+          <div className="entry-name">Journal item 1</div>
         </div>
         <div className="journal-form__tab-wrapper">
           <JournalTextArea />

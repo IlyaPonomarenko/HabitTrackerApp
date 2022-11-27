@@ -2,23 +2,30 @@
 
 .busyContainer {
   @include v.label-large;
+  padding: 5px;
   border-radius: 10px;
   height: 80px;
   background-color: v.$color-secondary-container-dark;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.busyBar {
-  width: 90%;
-  height: 8px;
-  background-color: v.$color-primary-dark;
-  border-radius: 5px;
-}
-.moodThumb {
-  height: 20px;
-  width: 20px;
-  background-color: v.$color-primary-dark;
-  border-radius: 20px;
+  position: relative;
+  &__busyBar {
+    width: 90%;
+    height: 8px;
+    background-color: v.$color-primary-dark;
+    border-radius: 5px;
+  }
+  &__moodThumb {
+    height: 20px;
+    width: 20px;
+    background-color: v.$color-primary-dark;
+    border-radius: 20px;
+  }
+  &__value {
+    color: v.$color-primary-dark;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
 }

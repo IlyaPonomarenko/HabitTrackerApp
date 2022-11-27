@@ -1,60 +1,57 @@
 @use "../../utilities/variables/" as v;
 
-.container {
-  display: flex;
-  width: 700px;
-  height: 220px;
+.feel-container {
+  display: block;
   border-radius: 5px;
   border: none;
   margin: 20px auto;
+  padding: 2px;
   background-color: v.$color-secondary-container-dark;
+  &__feel-positive {
+    display: flex;
+    height: 20%;
+    width: 95%;
+    margin: 10px;
+    color: #c1e5c0;
+  }
+  &__feel-neutral {
+    display: flex;
+    height: 20%;
+    width: 95%;
+    margin: 10px;
+    color: #c0dae5;
+  }
+  &__feel-negative {
+    display: flex;
+    height: 20%;
+    width: 95%;
+    margin: 10px;
+    color: #ffc278;
+  }
 }
-
-.line1 {
+.feel-positive,
+.feel-neutral,
+.feel-negative {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 4px;
+  flex-grow: 4;
+  margin: 2px;
   background-color: v.$color-surface-dark;
   border-radius: 5px;
   border: none;
-  overflow: hidden;
-  float: left;
+  padding: 0.3em;
 }
-
-.line1 label {
-  float: left;
-  line-height: 3em;
-  width: 7em;
+.feel-container label {
+  display: flex;
+  align-items: center;
+  width: auto;
   height: 2em;
 }
 
-.line1 label span {
-  display: flex;
-  justify-content: center;
-  padding: 2px 0;
-  display: block;
-}
-
-.line1 label input {
+.feel-container label input {
   position: absolute;
   display: none;
-  color: #fff !important;
 }
-/* selects all of the text within the input element and changes the color of the text */
-.line1 label input + span {
-  color: #fff;
-}
-
-/* This will declare how a selected input will look giving generic properties */
-.line1 input:checked + span {
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-}
-
-/*
-This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
-*/
 
 .excited input:checked + span {
   background-color: #f75a1b;

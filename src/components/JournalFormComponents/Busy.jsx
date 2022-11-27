@@ -10,6 +10,9 @@ class Busy extends Component {
         <div>
           <h4>How overwhelmed/busy are you?</h4>
         </div>
+        <div className="moodContainer__value">
+          <span>{this.state.values}</span>
+        </div>
         <Range
           step={0.1}
           min={0}
@@ -17,15 +20,16 @@ class Busy extends Component {
           values={this.state.values}
           onChange={(values) => this.setState({ values })}
           renderTrack={({ props, children }) => (
-            <div className="busyBar" {...props}>
+            <div className="busyContainer__busyBar" {...props}>
               {children}
             </div>
           )}
-          renderThumb={({ props }) => <div className="moodThumb" {...props} />}
+          renderThumb={({ props }) => (
+            <div className="busyContainer__moodThumb" {...props} />
+          )}
         />
       </div>
     );
   }
 }
-
 export default Busy;

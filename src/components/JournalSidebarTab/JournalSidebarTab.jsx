@@ -10,7 +10,6 @@ const JournalSidebarTab = ({
   onTabClick,
   children = "Journal Sidebar Tab",
   type = "button",
-  diaryCounter = "123",
   icon = "circle",
 }) => {
   return (
@@ -21,7 +20,6 @@ const JournalSidebarTab = ({
         {/* Displays button text */}
         <div className="journal-sidebar-tab__children">{children}</div>
       </div>
-      {diaryCounter} {/* Displays number of tasks */}
     </button>
   );
 };

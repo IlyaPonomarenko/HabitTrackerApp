@@ -18,8 +18,8 @@ class JournalTextArea extends Component {
   render() {
     return (
       <form>
-        <div className="text-area-container">
-          <div className="text-area-date">Time</div>
+        <div className="textArea-container">
+          <div className="text-area-date">Date</div>
           <label>
             <textarea
               placeholder="-"
