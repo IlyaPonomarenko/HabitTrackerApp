@@ -4,14 +4,34 @@ import JournalSidebar from "../../components/JournalSidebar/JournalSidebar";
 import JournalForm from "../../components/JournalForm/JournalForm";
 
 class Journal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "",
+      title: "New Journal Entry",
+      text: "Content",
+      mood: 30,
+      busy: 40,
+      inputDate: "1",
+      feel: [{ feelingGroup: 0, name: "", value: false }],
+    };
+  }
+
   render() {
     return (
-      <div className="journals">
+      <div className="journal">
         <JournalSidebar />
 
-        <div className="journal">
+        <div className="journal-main">
           {" "}
-          <JournalForm />
+          <JournalForm
+            title={this.state.title}
+            date={this.state.inputDate}
+            mood={this.state.mood}
+            value={this.state.value}
+            text={this.state.text}
+            busy={this.state.busy}
+          />
         </div>
       </div>
     );

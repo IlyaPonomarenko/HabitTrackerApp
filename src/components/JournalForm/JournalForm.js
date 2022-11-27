@@ -5,12 +5,12 @@ import Feel from "../JournalFormComponents/Feel";
 import JournalTextArea from "../JournalFormComponents/JournalTextArea";
 import "./JournalForm.scss";
 
-const JournalForm = () => {
+const JournalForm = (props) => {
   return (
     <div className="journal-form">
       <div className="form-container">
         <div>
-          <div className="entry-name">Journal item 1</div>
+          <div className="entry-name">{props.title}</div>
         </div>
         <div className="journal-form__tab-wrapper">
           <JournalTextArea />

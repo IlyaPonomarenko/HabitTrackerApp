@@ -1,5 +1,9 @@
 @use "../../utilities/variables/" as v;
 
+.feel-header {
+  margin: 10px 20px;
+}
+
 .feel-container {
   display: block;
   border-radius: 5px;
@@ -7,21 +11,21 @@
   margin: 20px auto;
   padding: 2px;
   background-color: v.$color-secondary-container-dark;
-  &__feel-positive {
+  &__positive {
     display: flex;
     height: 20%;
     width: 95%;
     margin: 10px;
     color: #c1e5c0;
   }
-  &__feel-neutral {
+  &__neutral {
     display: flex;
     height: 20%;
     width: 95%;
     margin: 10px;
     color: #c0dae5;
   }
-  &__feel-negative {
+  &__negative {
     display: flex;
     height: 20%;
     width: 95%;
@@ -29,9 +33,9 @@
     color: #ffc278;
   }
 }
-.feel-positive,
-.feel-neutral,
-.feel-negative {
+.positive,
+.neutral,
+.negative {
   display: flex;
   justify-content: center;
   flex-grow: 4;
