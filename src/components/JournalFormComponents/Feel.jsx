@@ -1,7 +1,7 @@
 import React from "react";
 import "./Feel.scss";
 
-export default function Feel() {
+const Feel = (props) => {
   return (
     <div>
       {" "}
@@ -144,4 +144,6 @@ export default function Feel() {
       </div>
     </div>
   );
-}
+};
+
+export default Feel;

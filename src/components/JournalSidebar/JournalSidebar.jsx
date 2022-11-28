@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import JournalSidebarTab from "../JournalSidebarTab/JournalSidebarTab";
 import "./JournalSidebar.scss";
 
-const JournalSidebar = ({ onButtonClick, onTabClick, diaryCounter }) => {
+const JournalSidebar = (props, { onButtonClick, onTabClick }) => {
   return (
     <div className="journal-sidebar">
       <div className="journal-sidebar__button-wrapper">
@@ -15,19 +15,10 @@ const JournalSidebar = ({ onButtonClick, onTabClick, diaryCounter }) => {
         {/* Placeholder Start */}
         <JournalSidebarTab
           type={"button"}
-          diaryCount={diaryCounter}
           onTabClick={onTabClick}
-          icon={"school"}
+          icon={"note"}
         >
-          Journal item 1
-        </JournalSidebarTab>
-        <JournalSidebarTab
-          type={"button"}
-          diaryCount={diaryCounter}
-          onTabClick={onTabClick}
-          icon={"work"}
-        >
-          Go for a walk
+          {props.title}
         </JournalSidebarTab>
 
         {/* Placeholder End */}

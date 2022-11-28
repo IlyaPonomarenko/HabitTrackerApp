@@ -8,11 +8,11 @@ class Journal extends Component {
     super(props);
     this.state = {
       value: "",
-      title: "New Journal Entry",
+      title: "Untitled Entry",
       text: "Content",
-      mood: 30,
-      busy: 40,
-      inputDate: "1",
+      moodLevel: 90,
+      busyLevel: 40,
+      date: "1",
       feel: [{ feelingGroup: 0, name: "", value: false }],
     };
   }
@@ -26,11 +26,11 @@ class Journal extends Component {
           {" "}
           <JournalForm
             title={this.state.title}
-            date={this.state.inputDate}
-            mood={this.state.mood}
+            date={this.state.date}
+            mood={this.state.moodLevel}
             value={this.state.value}
             text={this.state.text}
-            busy={this.state.busy}
+            busy={this.state.busyLevel}
           />
         </div>
       </div>

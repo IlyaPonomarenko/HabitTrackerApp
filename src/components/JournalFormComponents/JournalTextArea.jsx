@@ -1,11 +1,11 @@
 import React from "react";
 import "./JournalTextArea.scss";
 
-export default function JournalTextArea(props) {
+const JournalTextArea = (props) => {
   return (
     <form>
       <div className="textArea-container">
-        <div className="text-area-date">{props.date}</div>
+        <div className="text-area-date">Date</div>
         <label>
           <textarea
             placeholder={props.text}
@@ -17,4 +17,5 @@ export default function JournalTextArea(props) {
       </div>
     </form>
   );
-}
+};
+export default JournalTextArea;
