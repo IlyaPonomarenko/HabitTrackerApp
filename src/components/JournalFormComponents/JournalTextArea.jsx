@@ -1,21 +1,21 @@
-import React from "react";
-import "./JournalTextArea.scss";
+// import React from "react";
+// import "./JournalTextArea.scss";
 
-const JournalTextArea = (props) => {
-  return (
-    <form>
-      <div className="textArea-container">
-        <div className="text-area-date">Date</div>
-        <label>
-          <textarea
-            placeholder={props.text}
-            className="text-area"
-            value={props.value}
-            onChange={props.handleChange}
-          />
-        </label>
-      </div>
-    </form>
-  );
-};
-export default JournalTextArea;
+// const JournalTextArea = ({ activeEntry }) => {
+//   return (
+//     <form>
+//       <div className="textArea-container">
+//         <div className="text-area-date">Date</div>
+//         <label>
+//           <textarea
+//             placeholder="Write your  note here..."
+//             className="text-area"
+//             value={activeEntry.body}
+//             onChange={(e) => onEditField("body", e.target.value)}
+//           />
+//         </label>
+//       </div>
+//     </form>
+//   );
+// };
+// export default JournalTextArea;

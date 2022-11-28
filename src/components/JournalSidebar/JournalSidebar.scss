@@ -3,7 +3,7 @@
 .journal-sidebar {
   position: relative;
   flex-direction: column;
-  width: 340px;
+  width: 30%;
   height: 100vh;
   padding: 12px;
   background-color: v.$color-surface-1-dark;
@@ -13,4 +13,32 @@
     width: max-content;
     padding: 12px;
   }
+}
+.journal-sidebar__entries-wrapper {
+  height: calc(100vh - 78px);
+  overflow-y: scroll;
+  color: v.$color-on-surface-variant-dark;
+}
+.journal-sidebar__entry-wrapper {
+  padding: 25px;
+  cursor: pointer;
+}
+
+.journal-sidebar__entry-wrapper:hover {
+  background: rgb(169, 201, 216);
+}
+.journal-sidebar__entry-wrapper.active,
+.journal-sidebar__entry-wrapper.active small {
+  background: #08c;
+  color: white;
+}
+.journal-sidebar__entry-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.journal-sidebar__header h3 {
+  display: block;
+  padding: 25px;
+  color: v.$color-on-surface-variant-dark;
 }
