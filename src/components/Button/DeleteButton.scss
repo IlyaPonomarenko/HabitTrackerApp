@@ -1,12 +1,10 @@
 @use "../../utilities/variables/" as v;
 
-.button {
+.delete {
   @include v.label-large;
   display: flex;
   justify-content: end;
   color: v.$color-on-secondary-container-dark;
   background-color: transparent;
-  height: 40px;
-
   border: none;
 }

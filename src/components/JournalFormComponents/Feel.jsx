@@ -1,19 +1,26 @@
 import React from "react";
 import "./Feel.scss";
 
-const Feel = (props) => {
+const Feel = ({ checkHandler, onUpdateEntry, activeEntry }) => {
+  // const onEditField = (key, value) => {
+  //   onUpdateEntry({
+  //     ...activeEntry,
+  //     [key]: value,
+  //     lastModified: Date.now(),
+  //   });
+  // };
   return (
     <div>
-      {" "}
       <div className="feel-header">
         <h4>How do you feel?</h4>
       </div>
       <div className="feel-container">
         <div className="feel-container__positive">
           <div className="positive excited">
-            <label>
-              <input type="checkbox" value="1" />
+            <label htmlFor="excited">
+              <input type="checkbox" name="excited" />
               excited
+              {/* Burdan davam et */}
             </label>
           </div>
           <div className="positive joyful">

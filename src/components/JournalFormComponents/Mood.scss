@@ -19,8 +19,8 @@
   &__value {
     color: v.$color-primary-dark;
     position: absolute;
+    left: 5px;
     top: 5px;
-    right: 5px;
   }
 }
 
@@ -39,6 +39,4 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   background-color: v.$color-primary-dark;
   cursor: pointer;
-  box-shadow: 0 0 2px 0 #555;
-  transition: background 0.1s ease-in-out;
 }

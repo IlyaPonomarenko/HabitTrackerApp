@@ -1,7 +1,7 @@
 @use "../../utilities/variables/" as v;
 
 .feel-header {
-  margin: 10px 20px;
+  margin: 5px 20px;
 }
 
 .feel-container {
@@ -33,6 +33,12 @@
     color: #ffc278;
   }
 }
+
+.fell-container__positive.active {
+  color: v.$color-secondary-container-dark;
+  background-color: #c1e5c0;
+}
+
 .positive,
 .neutral,
 .negative {
@@ -44,6 +50,7 @@
   border-radius: 5px;
   border: none;
   padding: 0.3em;
+  cursor: pointer;
 }
 .feel-container label {
   display: flex;
@@ -57,9 +64,9 @@
   display: none;
 }
 
-.excited input:checked + span {
-  background-color: #f75a1b;
+.excited input:checked {
+  background-color: #b18573;
 }
-.joyful input:checked + span {
+.joyful input:checked {
   background-color: #1bb8f7;
 }

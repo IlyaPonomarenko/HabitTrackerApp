@@ -12,7 +12,7 @@ const DeleteButton = ({
   /* Checks if variant equals alert, if so adds className */
   variant = variant === "alert" ? "button--alert button" : "button";
   return (
-    <button onClick={onButtonClick} className={variant}>
+    <button onClick={onButtonClick} className="delete">
       <span className="material-icons">{(icon = "delete")}</span>
     </button>
   );

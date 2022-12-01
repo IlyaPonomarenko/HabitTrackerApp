@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
 import DeleteButton from "../Button/DeleteButton";
-// import JournalSidebarTab from "../JournalSidebarTab/JournalSidebarTab";
 import "./JournalSidebar.scss";
 
 const JournalSidebar = ({
@@ -14,12 +13,10 @@ const JournalSidebar = ({
   return (
     <div className="journal-sidebar">
       <div className="journal-sidebar__header">
-        <h3>Journal Entries</h3>
-        <div className="journal-sidebar__button-wrapper">
-          <Button onButtonClick={onAddEntry} icon={"add"}>
-            Add New
-          </Button>
-        </div>
+        <h1>Journal Entries</h1>
+        <Button onButtonClick={onAddEntry} icon={"add"}>
+          Add New
+        </Button>
       </div>
       <div className="journal-sidebar__entries-wrapper">
         {entries.map((entry) => (
@@ -32,10 +29,11 @@ const JournalSidebar = ({
             <div className="journal-sidebar__entry-title">
               <strong>{entry.title}</strong>
               <DeleteButton
+                className="delete"
                 onButtonClick={() => onDeleteEntry(entry.id)}
               ></DeleteButton>
             </div>
-            <p>{entry.body && entry.body.substr(0, 50) + "..."}</p>
+            <p>{entry.body && entry.body.substr(0, 30) + "..."}</p>
             <small className="entry-meta">
               Last modified{" "}
               {new Date(entry.lastModified).toLocaleDateString("en-GB", {

@@ -1,12 +1,7 @@
 @use "../../utilities/variables/" as v;
 
-.entry-name {
-  font-size: 24px;
-  margin: 10px;
-}
-
 .journal-form {
-  width: 90%;
+  width: 100vh;
   height: 100vh;
   background-color: v.$color-surface-dark;
   color: v.$color-on-surface-variant-dark;
@@ -14,38 +9,15 @@
 
 .form-container {
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   height: 90vh;
   background-color: v.$color-surface-dark;
   padding: 20px;
   margin: 0px;
 }
 
-.textArea-container {
-  max-width: 100%;
-  min-height: 200px;
-  border-radius: 5px;
-  background-color: v.$color-secondary-container-dark;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.textArea-container label {
-  width: 100%;
-}
-
-.text-area {
-  width: 100%;
-  height: 190px;
-  border-radius: 5px;
-  border: none;
-  background-color: v.$color-secondary-container-dark;
-  color: v.$color-on-surface-variant-dark;
-  outline: none;
-}
-
 .mood-busy-container {
   display: grid;
-  grid-template-columns: 3fr 3fr;
+  grid-template-columns: 1fr 1fr;
   gap: 5px;
 }

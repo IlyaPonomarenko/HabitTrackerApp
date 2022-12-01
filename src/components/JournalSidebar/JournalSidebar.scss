@@ -3,42 +3,55 @@
 .journal-sidebar {
   position: relative;
   flex-direction: column;
-  width: 30%;
+  width: 340px;
   height: 100vh;
   padding: 12px;
   background-color: v.$color-surface-1-dark;
+  color: v.$color-on-surface-variant-dark;
   &__button-wrapper {
     margin: 0 0 0 auto;
     justify-content: end;
     width: max-content;
-    padding: 12px;
+    padding: 5px;
   }
-}
-.journal-sidebar__entries-wrapper {
-  height: calc(100vh - 78px);
-  overflow-y: scroll;
-  color: v.$color-on-surface-variant-dark;
-}
-.journal-sidebar__entry-wrapper {
-  padding: 25px;
-  cursor: pointer;
-}
-
-.journal-sidebar__entry-wrapper:hover {
-  background: rgb(169, 201, 216);
+  &__entries-wrapper {
+    overflow-y: scroll;
+    height: calc(100vh - 140px);
+  }
+  &__entries-wrapper::-webkit-scrollbar {
+    background-color: v.$color-surface-1-dark;
+    width: 5px;
+  }
+  &__entries-wrapper:hover::-webkit-scrollbar-thumb {
+    background: v.$color-on-surface-variant-dark;
+  }
+  &__entry-wrapper {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+  }
+  &__entry-wrapper:hover {
+    background-color: v.$color-secondary-container-dark;
+  }
 }
 .journal-sidebar__entry-wrapper.active,
 .journal-sidebar__entry-wrapper.active small {
-  background: #08c;
-  color: white;
+  background-color: v.$color-secondary-container-dark;
+  color: v.$color-on-secondary-container-dark;
 }
 .journal-sidebar__entry-title {
   display: flex;
   justify-content: space-between;
 }
 
-.journal-sidebar__header h3 {
-  display: block;
-  padding: 25px;
-  color: v.$color-on-surface-variant-dark;
+.journal-sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px 40px;
+}
+
+.entry-meta {
+  font-size: 12px;
+  font-weight: 600;
 }
