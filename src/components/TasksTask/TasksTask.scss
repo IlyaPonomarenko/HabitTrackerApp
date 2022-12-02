@@ -3,6 +3,10 @@
 .task {
   background-color: v.$color-background-dark;
   border-radius: 16px;
+  &--active {
+    background-color: #353336;
+    border-radius: 16px;
+  }
   &__checkbox {
     height: 18px;
     width: 18px;

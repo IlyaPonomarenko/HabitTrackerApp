@@ -5,4 +5,7 @@
   align-items: center;
   margin-left: 80px;
   background-color: v.$color-background-dark;
+  &--active {
+    background-color: red;
+  }
 }
