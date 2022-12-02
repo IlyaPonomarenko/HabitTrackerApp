@@ -1,7 +1,7 @@
 @use "../../utilities/variables/" as v;
 
 .task {
-  background-color: #353336;
+  background-color: v.$color-background-dark;
   border-radius: 16px;
   &__checkbox {
     height: 18px;

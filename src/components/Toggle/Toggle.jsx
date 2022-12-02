@@ -1,23 +1,17 @@
 import "./Toggle.scss";
 import React, { useState } from "react";
 
-/* If we want to save weather the user has toggled the completed tasks */
-const Toggle = ({ toggled }) => {
-  /* TODO: State will have to be bassed to parent */
-  const defaultToggled = toggled ? toggled : false;
-  const [isToggled, setIsToggled] = useState(defaultToggled);
-
+/* If we want to save whether the user has toggled the completed tasks */
+const Toggle = ({ showChildren, toggleHandler }) => {
+  /* TODO: State will have to be passed to parent */
   return (
     <>
-      {isToggled ? (
-        <div
-          className="toggle--selected"
-          onClick={() => setIsToggled((prev) => !prev)}
-        >
+      {showChildren ? (
+        <div className="toggle--selected" onClick={toggleHandler}>
           <div className="toggle--selected__knob"></div>
         </div>
       ) : (
-        <div className="toggle" onClick={() => setIsToggled((prev) => !prev)}>
+        <div className="toggle" onClick={toggleHandler}>
           <div className="toggle__knob"></div>
         </div>
       )}
