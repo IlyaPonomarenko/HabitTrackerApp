@@ -1,9 +1,13 @@
 @use "../../utilities/variables/" as v;
 .date-picker {
-  min-width: 328px;
-  width: 328px;
-  background-color: #302d38;
-  border-radius: 28px;
+  &__container {
+    position: absolute;
+    margin-top: 8px;
+    min-width: 328px;
+    width: 328px;
+    background-color: #302d38;
+    border-radius: 28px;
+  }
   &__header {
     color: v.$color-on-secondary-container-dark;
     @include v.label-medium;

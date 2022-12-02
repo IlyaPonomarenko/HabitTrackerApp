@@ -1,7 +1,7 @@
 import "./TimeInput.scss";
 import React from "react";
 
-const TimeInput = () => {
+const TimeInput = ({ minuteRef, hourRef }) => {
   /* 
   TODO: set max length and number of input
   */
@@ -16,6 +16,7 @@ const TimeInput = () => {
           min="1"
           max="24"
           maxLength="2"
+          ref={hourRef}
         />
         <label className="time-input__label" htmlFor="input-hours">
           Hours
@@ -30,6 +31,7 @@ const TimeInput = () => {
           min="1"
           max="60"
           maxLength="2"
+          ref={minuteRef}
         />
         <label className="time-input__label" htmlFor="input-minutes">
           Minutes

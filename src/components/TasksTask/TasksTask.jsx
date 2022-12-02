@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import Checkbox from "../Checkbox/Checkbox";
 import PriorityPicker from "../PriorityPicker/PriorityPicker";
+import DatePicker from "../DatePicker/DatePicker";
+import ReminderPicker from "../ReminderPicker/ReminderPicker";
+import TimePicker from "../TimePicker/TimePicker";
 
 const TasksTask = ({
   taskDate = "Enter Date Here",
@@ -44,9 +47,12 @@ const TasksTask = ({
           <div className="task__content">{taskContent}</div>
           <div className="task__buttons-wrapper">
             <PriorityPicker />
-            <Button icon={"calendar_month"}>Add Date</Button>
-            <Button icon={"bookmark"}>Remind Me</Button>
-            <Button icon={"timer"}>Length of task</Button>
+            {/* <Button icon={"calendar_month"}>Add Date</Button> */}
+            <DatePicker />
+            {/* <Button icon={"bookmark"}>Remind Me</Button> */}
+            <ReminderPicker />
+            {/* <Button icon={"timer"}>Length of task</Button> */}
+            <TimePicker />
           </div>
         </>
       )}

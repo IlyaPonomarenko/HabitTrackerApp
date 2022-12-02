@@ -1,6 +1,8 @@
 @use "../../utilities/variables/" as v;
-.date-picker {
+.time-picker {
   &__container {
+    position: absolute;
+    margin-top: 8px;
     background-color: #302d38;
     border-radius: 28px;
   }
