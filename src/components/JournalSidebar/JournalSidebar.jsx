@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../Button/Button";
-import DeleteButton from "../Button/DeleteButton";
 import "./JournalSidebar.scss";
 
 const JournalSidebar = ({
@@ -9,6 +8,7 @@ const JournalSidebar = ({
   onDeleteEntry,
   activeEntry,
   setActiveEntry,
+  icon,
 }) => {
   return (
     <div className="journal-sidebar">
@@ -28,10 +28,12 @@ const JournalSidebar = ({
           >
             <div className="journal-sidebar__entry-title">
               <strong>{entry.title}</strong>
-              <DeleteButton
+              <Button
                 className="delete"
                 onButtonClick={() => onDeleteEntry(entry.id)}
-              ></DeleteButton>
+              >
+                <span className="material-icons">{(icon = "delete")}</span>
+              </Button>
             </div>
             <p>{entry.body && entry.body.substr(0, 30) + "..."}</p>
             <small className="entry-meta">

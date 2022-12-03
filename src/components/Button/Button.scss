@@ -35,8 +35,8 @@
   }
 
   &--delete {
+    color: v.$color-on-secondary-container-dark;
     background-color: transparent;
-    color: v.$color-on-primary-dark;
   }
 
   &--text-only {
