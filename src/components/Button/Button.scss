@@ -33,6 +33,12 @@
     background-color: v.$color-primary-dark;
     color: v.$color-on-primary-dark;
   }
+
+  &--delete {
+    background-color: transparent;
+    color: v.$color-on-primary-dark;
+  }
+
   &--text-only {
     color: v.$color-primary-dark;
     background-color: transparent;
