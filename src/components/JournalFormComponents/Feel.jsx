@@ -1,14 +1,14 @@
 import React from "react";
 import "./Feel.scss";
 
-const Feel = ({ checkHandler, onUpdateEntry, activeEntry }) => {
-  // const onEditField = (key, value) => {
-  //   onUpdateEntry({
-  //     ...activeEntry,
-  //     [key]: value,
-  //     lastModified: Date.now(),
-  //   });
-  // };
+const Feel = ({ checkHandler, onUpdateEntry, activeEntry, entries }) => {
+  const onEditField = (key, value) => {
+    onUpdateEntry({
+      ...activeEntry,
+      [key]: value,
+      lastModified: Date.now(),
+    });
+  };
   return (
     <div>
       <div className="feel-header">
@@ -17,10 +17,15 @@ const Feel = ({ checkHandler, onUpdateEntry, activeEntry }) => {
       <div className="feel-container">
         <div className="feel-container__positive">
           <div className="positive excited">
-            <label htmlFor="excited">
+            <label
+              htmlFor="excited"
+              className="positive excited"
+              value={activeEntry.feeling.excited}
+              onChange={(e) => onEditField("excited", e.target.value)}
+              autoFocus
+            >
               <input type="checkbox" name="excited" />
               excited
-              {/* Burdan davam et */}
             </label>
           </div>
           <div className="positive joyful">

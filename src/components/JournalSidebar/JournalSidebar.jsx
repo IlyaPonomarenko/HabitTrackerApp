@@ -29,7 +29,7 @@ const JournalSidebar = ({
             <div className="journal-sidebar__entry-title">
               <strong>{entry.title}</strong>
               <Button
-                className="delete"
+                variant="delete"
                 onButtonClick={() => onDeleteEntry(entry.id)}
               >
                 <span className="material-icons">{(icon = "delete")}</span>

@@ -57,10 +57,11 @@
   align-items: center;
   width: auto;
   height: 2em;
+  cursor: pointer;
 }
 
 .feel-container label input {
-  position: absolute;
+  position: flex;
   display: none;
 }
 

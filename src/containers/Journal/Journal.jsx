@@ -57,7 +57,7 @@ function Journal() {
       }
       return entry;
     });
-    console.log("ckecked");
+    console.log(updatedEntry);
 
     setEntries(updatedEntriesArray);
   };
