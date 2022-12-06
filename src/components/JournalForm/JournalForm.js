@@ -6,7 +6,7 @@ import JournalTextArea from "../JournalFormComponents/JournalTextArea";
 
 import "./JournalForm.scss";
 
-const JournalForm = ({ activeEntry, onUpdateEntry, checkHandler }) => {
+const JournalForm = ({ activeEntry, onUpdateEntry, onChange, checkboxes }) => {
   if (!activeEntry)
     return <div className="no-active-entry">No Entry Selected</div>;
 
@@ -37,7 +37,8 @@ const JournalForm = ({ activeEntry, onUpdateEntry, checkHandler }) => {
           <Feel
             activeEntry={activeEntry}
             onUpdateEntry={onUpdateEntry}
-            checkHandler={checkHandler}
+            onChange={onChange}
+            checkboxes={checkboxes}
           />
         </div>
       </div>

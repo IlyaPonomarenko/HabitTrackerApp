@@ -14,9 +14,9 @@ function Journal() {
       title: "Journal Entry",
       body: "Please type here...",
       lastModified: Date.now(),
-      moodLevel: 10,
-      busyLevel: 90,
-      feeling: {
+      moodLevel: 50,
+      busyLevel: 50,
+      feelings: {
         excited: false,
         joyful: false,
         amazed: false,
@@ -39,15 +39,7 @@ function Journal() {
         meh: false,
       },
     };
-
     setEntries([newEntry, ...entries]);
-  };
-
-  const checkHandler = () => {
-    // if (e.target.checked) {
-    console.log("ckecked");
-    //   setEntries({ ...entries.feeling, [e.target.name]: true });
-    // }
   };
 
   const onUpdateEntry = (updatedEntry) => {
@@ -83,10 +75,7 @@ function Journal() {
       <div className="journal-main">
         {" "}
         <JournalForm
-          entries={entries}
-          checkHandler={checkHandler}
           activeEntry={getActiveEntry()}
-          setActiveEntry={setActiveEntry}
           onUpdateEntry={onUpdateEntry}
         />
       </div>
