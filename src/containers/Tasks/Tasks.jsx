@@ -1,7 +1,7 @@
 import "./Tasks.scss";
 import React, { Component } from "react";
 import { database, tasks_collection } from "../../firestore-config";
-import { collection, doc, setDoc } from "firebase/firestore"; 
+import { arrayUnion, collection, doc, setDoc } from "firebase/firestore"; 
 import TasksSidebar from "../../components/TasksSidebar/TasksSidebar";
 import TasksMain from "../../components/TasksMain/TasksMain";
 
@@ -9,7 +9,7 @@ class TaskEntry
 {
   constructor()
   {
-    this.id = "";
+    this.id = "test";
     this.status = false;
     this.title = "Do a push up";
     this.text = "I can do it!";
@@ -30,13 +30,20 @@ class TaskGroup
     this.title = "Sport"
   }
   CreateTaskEntry(){
-    this.userTasks = [...this.userTasks, new TaskEntry()];
-    console.log(`New task created, task list: ${this.userTasks}`);
-    // WIP Send to remote (taskList: arrayUnion(task))
-    // find appropriate document in taskdocs and updt. OR save document inside group (kinda better)
+    const taskEntryRef = new TaskEntry();
+    this.userTasks = [...this.userTasks, taskEntryRef];
+    this.tasksRef.UpdateJSON(this.id, {
+      id : taskEntryRef.id,
+      status : taskEntryRef.status,
+      title : taskEntryRef.title,
+      text : taskEntryRef.text,
+      date : taskEntryRef.date,
+      priority : taskEntryRef.priority,
+      timeEstimate : taskEntryRef.timeEstimate,
+      daysMissed : taskEntryRef.daysMissed
+    });
     this.tasksRef.forceUpdate()
   };
-  //UpdateGroupData();
 }
 
 class Tasks extends Component {
@@ -44,11 +51,11 @@ class Tasks extends Component {
     super();
     this.taskDocuments = [];
     this.CreateTaskGroup = this.CreateTaskGroup.bind(this);
-    this.UpdateRemote = this.UpdateRemote.bind(this);
     this.RenderSelectedGroup = this.RenderSelectedGroup.bind(this);
     this.SelectTaskGroup = this.SelectTaskGroup.bind(this);
+    this.UpdateJSON = this.UpdateJSON.bind(this);
     this.state = {
-      taskGroups : [new TaskGroup("testoPatronum", this)], // :: DEBUG ::
+      taskGroups : [new TaskGroup("testTaskGroup", this)], // :: DEBUG ::
       selectedTaskGroup : null
     };
   }
@@ -63,7 +70,6 @@ class Tasks extends Component {
   }
 
   // :: CLASS FUNCTIONALITY ::
-
   SelectTaskGroup(id)
   {
     try{
@@ -90,31 +96,19 @@ class Tasks extends Component {
     this.setState({taskGroups : [...this.state.taskGroups, new TaskGroup(newTaskGroup.id, this)]});
   }
 
-  async UpdateRemote(taskDocuments) // WIP
+  //[FUTURE FUNCTIONALITY] Will push data to JSON file, [DEBUG] Right now I use it chuck data directly into FireStore [DEBUG]
+  UpdateJSON(groupID, task) // third parameter should be taskID (for updating only one task)
   {
-    this.state.taskGroups.forEach(function(group){
-      try{
-        const tempDoc = taskDocuments.find(doc => doc.id === group.id)
-        const testTaskGroupData = {
-              title: "Sport",
-              testTask: {
-                id: 5,
-                status: false,
-                title: "jogging",
-                text: "gotta go fast"
-              }}
-        setDoc(tempDoc, testTaskGroupData, {merge : true});// Continue here, update remote (update each groups' tasks)
-      }
-      catch{
-        console.log(`"didn't found a doc with given ID :: UPDATE REMOTE :: ${group.id}`)
-      }
+    const groupDocRef = this.taskDocuments.find(group => group.id == groupID);
+    setDoc(groupDocRef, {
+      tasks: arrayUnion(task),
     });
-  }
+  };
 
   // :: COMPONENT UPDT. CONTROLS ::
-  componentDidUpdate()
+  componentDidMount()
   {
-    this.UpdateRemote(this.taskDocuments);
+    this.taskDocuments[0] = doc(database, "users/testUser/tasks/testTaskGroup");
   }
 }
 
