@@ -1,0 +1,47 @@
+@use "../../utilities/variables/" as v;
+
+.checkbox-wrapper input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design (unchecked)*/
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  margin-right: 0.5em;
+  border: 2px solid v.$color-on-surface-variant-dark;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Checked background */
+.checkbox-wrapper input[type="checkbox"]:checked {
+  border: none;
+  background-color: #d0bcff;
+  position: relative;
+}
+
+/* Checked checkmark */
+input:checked::before {
+  content: " \2714";
+  font-size: 12px;
+  color: v.$color-on-primary-dark;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+}
+
+/* Disabled */
+.checkbox-wrapper input[type="checkbox"]:disabled {
+  border-color: v.$color-on-surface-dark;
+  background-color: v.$color-on-surface-dark;
+}
+
+.checkbox-wrapper input[type="checkbox"]:disabled + span {
+  color: #c0c0c0;
+}
+
+/* Focused */
+.checkbox-wrapper input[type="checkbox"]:focus {
+  box-shadow: 0 0 20px #322f3a;
+}
