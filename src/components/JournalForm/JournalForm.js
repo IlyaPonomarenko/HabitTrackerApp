@@ -3,12 +3,13 @@ import Mood from "../JournalFormComponents/Mood";
 import Busy from "../JournalFormComponents/Busy";
 import Feel from "../JournalFormComponents/Feel";
 import JournalTextArea from "../JournalFormComponents/JournalTextArea";
-
+import NoEntryScreen from "../JournalFormComponents/NoEntryScreen";
 import "./JournalForm.scss";
+
 
 const JournalForm = ({ activeEntry, onUpdateEntry, onChange, checkboxes }) => {
   if (!activeEntry)
-    return <div className="no-active-entry">No Entry Selected</div>;
+    return <div className="no-active-entry"><NoEntryScreen/></div>;
 
   return (
     <div className="journal-form">

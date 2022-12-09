@@ -1,7 +1,7 @@
 @use "../../utilities/variables/" as v;
 
 .journal-form {
-  width: 145vh;
+  width: calc(102vw - 420px);
   height: 100vh;
   background-color: v.$color-surface-dark;
   color: v.$color-on-surface-variant-dark;
@@ -20,4 +20,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
+}
+
+.no-active-entry {
+
+  color: v.$color-surface-dark;
 }

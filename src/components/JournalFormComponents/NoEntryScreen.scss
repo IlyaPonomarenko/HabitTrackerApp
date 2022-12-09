@@ -1,0 +1,11 @@
+@use "../../utilities/variables/" as v;
+
+.no-entry-container {
+  width: calc(102vw - 420px);
+  height: 100vh;
+  background-color: v.$color-surface-dark;
+  color: v.$color-on-surface-variant-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

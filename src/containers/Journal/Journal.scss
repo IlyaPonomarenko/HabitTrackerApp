@@ -8,6 +8,6 @@
   @include v.label-large;
   position: fixed;
   top: 0%;
-  right: 0%;
-  width: 68%;
+  left: 420px;
+  width: calc(100vw - 420px);
 }
