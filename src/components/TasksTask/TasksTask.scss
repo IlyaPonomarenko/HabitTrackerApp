@@ -25,6 +25,8 @@
     }
   }
   &__title {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     cursor: pointer;
   }
@@ -35,6 +37,21 @@
   &__h3 {
     @include v.body-large;
     color: v.$color-on-surface-dark;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    &:active {
+      border: none;
+      outline: none;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
   }
   &__trailing {
     display: flex;
@@ -51,6 +68,20 @@
     @include v.body-medium;
     color: v.$color-on-surface-variant-dark;
     padding: 10px 56px;
+    background-color: transparent;
+    border: none;
+    &:active {
+      border: none;
+      outline: none;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
   }
   &__buttons-wrapper {
     display: flex;
