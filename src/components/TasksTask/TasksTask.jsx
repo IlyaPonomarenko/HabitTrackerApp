@@ -17,7 +17,7 @@ const TasksTask = ({
   taskContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quasi blanditiis id quisquam repellendus ipsa iusto fugit laboriosam, ad nostrum.",
   taskDaysMissed = 3,
 }) => {
-  const [showTask, setShowTask] = useState(true);
+  const [showTask, setShowTask] = useState(false);
   const showTaskHandler = () => {
     setShowTask(!showTask);
   };
