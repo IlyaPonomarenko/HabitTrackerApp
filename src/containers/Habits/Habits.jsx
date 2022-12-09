@@ -7,7 +7,6 @@ const Habits = () => {
   const [components, setComponents] = useState([]);
 
   const createNewGroup = () => {
-    console.log(components);
     setComponents([...components, "New habit group"]);
   };
 
@@ -15,7 +14,7 @@ const Habits = () => {
     <div className="habits-frame">
       <div className="habits-tab">
         <div className="habits-tab__headline">
-          <h2 className="h1-habit">All Habits</h2>
+          <h2 className="h1-habit">Your Habits</h2>
           <Button onButtonClick={createNewGroup} icon={"add"}>
             new group
           </Button>
