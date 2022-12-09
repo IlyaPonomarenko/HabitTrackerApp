@@ -42,7 +42,7 @@ const TasksTask = ({
             </div>
             {/* Change arrow icon if task is active */}
           </div>
-          <input className="task__content" defaultValue={taskContent} />
+          <textarea className="task__content" defaultValue={taskContent} />
           <div className="task__buttons-wrapper">
             <PriorityPicker />
             {/* <Button icon={"calendar_month"}>Add Date</Button> */}

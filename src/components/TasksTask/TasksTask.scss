@@ -66,6 +66,9 @@
   }
   &__content {
     @include v.body-medium;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
     color: v.$color-on-surface-variant-dark;
     padding: 10px 56px;
     background-color: transparent;
