@@ -16,7 +16,29 @@ function Journal() {
       lastModified: Date.now(),
       moodLevel: 50,
       busyLevel: 50,
-      feelings: [],
+      feelings: [
+        // { name: "excited", checked: false },
+        // { name: "joyful", checked: false },
+        // { name: "amazed", checked: false },
+        // { name: "grateful", checked: false },
+        // { name: "accomplished", checked: false },
+        // { name: "thankful", checked: false },
+        // { name: "proud", checked: false },
+        // { name: "productive", checked: false },
+        // { name: "active", checked: false },
+        // { name: "relaxed", checked: false },
+        // { name: "calm", checked: false },
+        // { name: "optimistic", checked: false },
+        // { name: "chilled", checked: false },
+        // { name: "supported", checked: false },
+        // { name: "sad", checked: false },
+        // { name: "nervous", checked: false },
+        // { name: "impatent", checked: false },
+        // { name: "bored", checked: false },
+        // { name: "worried", checked: false },
+        // { name: "meh", checked: false },
+        // { name: "overwhelmed", checked: false },
+      ],
     };
     setEntries([newEntry, ...entries]);
   };
@@ -28,9 +50,22 @@ function Journal() {
       }
       return entry;
     });
+    console.log(updatedEntry);
 
     setEntries(updatedEntriesArray);
   };
+
+  // const handleChange = (e) => {
+  //   const value = e.target.value;
+  //   const tempFeelings = entries.feelings.map((entry, feeling) => {
+  //     if (entry.id === activeEntry && feeling.value === value) {
+  //       return { ...feeling, checked: true };
+  //     }
+  //     return feeling;
+  //   });
+
+  //   setEntries({ ...entries, feelings: tempFeelings });
+  // };
 
   const onDeleteEntry = (idToDelete) => {
     setEntries(entries.filter((entry) => entry.id !== idToDelete));
@@ -39,7 +74,7 @@ function Journal() {
   const getActiveEntry = () => {
     return entries.find((entry) => entry.id === activeEntry);
   };
-  console.log(entries);
+
   return (
     <div className="journal">
       <JournalSidebar
@@ -55,6 +90,7 @@ function Journal() {
         <JournalForm
           activeEntry={getActiveEntry()}
           onUpdateEntry={onUpdateEntry}
+          // handleChange={handleChange}
         />
       </div>
     </div>
