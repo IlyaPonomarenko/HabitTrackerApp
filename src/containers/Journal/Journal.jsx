@@ -28,7 +28,6 @@ function Journal() {
       }
       return entry;
     });
-    console.log(updatedEntry);
 
     setEntries(updatedEntriesArray);
   };
@@ -40,7 +39,7 @@ function Journal() {
   const getActiveEntry = () => {
     return entries.find((entry) => entry.id === activeEntry);
   };
-
+  console.log(entries);
   return (
     <div className="journal">
       <JournalSidebar

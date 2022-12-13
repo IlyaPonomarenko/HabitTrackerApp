@@ -6,10 +6,13 @@ import JournalTextArea from "../JournalFormComponents/JournalTextArea";
 import NoEntryScreen from "../JournalFormComponents/NoEntryScreen";
 import "./JournalForm.scss";
 
-
-const JournalForm = ({ activeEntry, onUpdateEntry, onChange, checkboxes }) => {
+const JournalForm = ({ activeEntry, onUpdateEntry }) => {
   if (!activeEntry)
-    return <div className="no-active-entry"><NoEntryScreen/></div>;
+    return (
+      <div className="no-active-entry">
+        <NoEntryScreen />
+      </div>
+    );
 
   return (
     <div className="journal-form">
@@ -20,35 +23,16 @@ const JournalForm = ({ activeEntry, onUpdateEntry, onChange, checkboxes }) => {
         />
         <div className="mood-busy-container">
           <div className="mood-container">
-            <Mood
-              moodLevel={activeEntry.moodLevel}
-              activeEntry={activeEntry}
-              onUpdateEntry={onUpdateEntry}
-            />
+            <Mood activeEntry={activeEntry} onUpdateEntry={onUpdateEntry} />
           </div>
           <div className="busy-container">
-            <Busy
-              busyLevel={activeEntry.busyLevel}
-              activeEntry={activeEntry}
-              onUpdateEntry={onUpdateEntry}
-            />
+            <Busy activeEntry={activeEntry} onUpdateEntry={onUpdateEntry} />
           </div>
         </div>
         <div className="feel-container">
-          <Feel
-            activeEntry={activeEntry}
-            onUpdateEntry={onUpdateEntry}
-            onChange={onChange}
-            checkboxes={checkboxes}
-          />
+          <Feel activeEntry={activeEntry} onUpdateEntry={onUpdateEntry} />
         </div>
       </div>
-      {/* <div className="preview-container">
-        <div className="journal-form_preview">
-          <h3 className="preview-title">{activeEntry.title}</h3>
-          <div className="markdown-preview">{activeEntry.body}</div>
-        </div>
-      </div> */}
     </div>
   );
 };

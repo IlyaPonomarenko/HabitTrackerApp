@@ -2,10 +2,10 @@ import React from "react";
 import "./Feel.scss";
 
 const Feel = ({ activeEntry, onUpdateEntry }) => {
-  const onEditField = (feeling, value) => {
+  const onEditField = (key, value) => {
     onUpdateEntry({
       ...activeEntry,
-      feelings: [{ [feeling]: value }],
+      feelings: [{ [key]: value }],
       lastModified: Date.now(),
     });
   };
@@ -18,14 +18,14 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
         <div className="feel-container__positive">
           <div className="positive excited">
             <input
+              key="excited"
               type="checkbox"
+              className="positive excited"
               name="excited"
+              value="excited"
               onChange={(e) => onEditField("excited", e.target.checked)}
             />{" "}
-            <label className="positive excited" htmlFor="excited">
-              {" "}
-              excited
-            </label>
+            <label htmlFor="excited"> excited</label>
           </div>
           <div className="positive joyful">
             <input
@@ -33,10 +33,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               name="joyful"
               onChange={(e) => onEditField("joyful", e.target.checked)}
             />
-            <label className="positive joyful" htmlFor="joyful">
-              {" "}
-              joyful
-            </label>
+            <label htmlFor="joyful"> joyful</label>
           </div>
           <div className="positive amazed">
             <input
@@ -44,10 +41,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               name="amazed"
               onChange={(e) => onEditField("amazed", e.target.checked)}
             />
-            <label className="positive amazed" htmlFor="amazed">
-              {" "}
-              amazed
-            </label>
+            <label htmlFor="amazed"> amazed</label>
           </div>
           <div className="positive grateful">
             <input
@@ -55,10 +49,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               name="grateful"
               onChange={(e) => onEditField("grateful", e.target.checked)}
             />
-            <label className="positive grateful" htmlFor="grateful">
-              {" "}
-              grateful
-            </label>
+            <label htmlFor="grateful"> grateful</label>
           </div>
           <div className="positive accomplished">
             <input
@@ -66,10 +57,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               name="accomplished"
               onChange={(e) => onEditField("accomplished", e.target.checked)}
             />
-            <label className="positive accomplished" htmlFor="accomplished">
-              {" "}
-              accomplished
-            </label>
+            <label htmlFor="accomplished"> accomplished</label>
           </div>
           <div className="positive thankful">
             <input
@@ -77,10 +65,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               name="thankful"
               onChange={(e) => onEditField("thankful", e.target.checked)}
             />
-            <label className="positive thankful" htmlFor="thankful">
-              {" "}
-              thankful
-            </label>
+            <label htmlFor="thankful"> thankful</label>
           </div>
           <div className="positive proud">
             <input
@@ -88,10 +73,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               name="proud"
               onChange={(e) => onEditField("proud", e.target.checked)}
             />
-            <label className="positive proud" htmlFor="proud">
-              {" "}
-              proud
-            </label>
+            <label htmlFor="proud"> proud</label>
           </div>
         </div>
         <div className="feel-container__neutral">
@@ -101,10 +83,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="productive"
               onChange={(e) => onEditField("productive", e.target.checked)}
             />
-            <label className="neutral productive" htmlFor="productive">
-              {" "}
-              productive
-            </label>
+            <label htmlFor="productive"> productive</label>
           </div>
           <div className="neutral active">
             <input
@@ -112,10 +91,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="active"
               onChange={(e) => onEditField("active", e.target.checked)}
             />
-            <label className="neutral active" htmlFor="active">
-              {" "}
-              active
-            </label>
+            <label htmlFor="active"> active</label>
           </div>
           <div className="neutral relaxed">
             <input
@@ -123,10 +99,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="relaxed"
               onChange={(e) => onEditField("relaxed", e.target.checked)}
             />
-            <label className="neutral relaxed" htmlFor="relaxed">
-              {" "}
-              relaxed
-            </label>
+            <label htmlFor="relaxed"> relaxed</label>
           </div>
           <div className="neutral calm">
             <input
@@ -134,10 +107,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="calm"
               onChange={(e) => onEditField("calm", e.target.checked)}
             />
-            <label className="neutral calm" htmlFor="calm">
-              {" "}
-              calm
-            </label>
+            <label htmlFor="calm"> calm</label>
           </div>
           <div className="neutral optimistic">
             <input
@@ -145,10 +115,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="optimistic"
               onChange={(e) => onEditField("optimistic", e.target.checked)}
             />
-            <label className="neutral optimistic" htmlFor="optimistic">
-              {" "}
-              optimistic
-            </label>
+            <label htmlFor="optimistic"> optimistic</label>
           </div>
           <div className="neutral chilled">
             <input
@@ -156,10 +123,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="chilled"
               onChange={(e) => onEditField("chilled", e.target.checked)}
             />
-            <label className="neutral chilled" htmlFor="chilled">
-              {" "}
-              chilled
-            </label>
+            <label htmlFor="chilled"> chilled</label>
           </div>
           <div className="neutral supported">
             <input
@@ -167,10 +131,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="supported"
               onChange={(e) => onEditField("supported", e.target.checked)}
             />
-            <label className="neutral supported" htmlFor="supported">
-              {" "}
-              supported
-            </label>
+            <label htmlFor="supported"> supported</label>
           </div>
         </div>
         <div className="feel-container__negative">
@@ -180,10 +141,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="sad"
               onChange={(e) => onEditField("sad", e.target.checked)}
             />
-            <label className="negative sad" htmlFor="sad">
-              {" "}
-              sad
-            </label>
+            <label htmlFor="sad"> sad</label>
           </div>
           <div className="negative nervous">
             <input
@@ -191,21 +149,15 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="nervous"
               onChange={(e) => onEditField("nervous", e.target.checked)}
             />
-            <label className="negative nervous" htmlFor="nervous">
-              {" "}
-              nervous
-            </label>
+            <label htmlFor="nervous"> nervous</label>
           </div>
-          <div className="negative impotient">
+          <div className="negative impatient">
             <input
               type="checkbox"
-              value="impotient"
-              onChange={(e) => onEditField("impotient", e.target.checked)}
+              value="impatient"
+              onChange={(e) => onEditField("impatient", e.target.checked)}
             />
-            <label className="negative impotient" htmlFor="impotient">
-              {" "}
-              impatient
-            </label>
+            <label htmlFor="impatient"> impatient</label>
           </div>
           <div className="negative bored">
             <input
@@ -213,10 +165,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="bored"
               onChange={(e) => onEditField("bored", e.target.checked)}
             />
-            <label className="negative bored" htmlFor="bored">
-              {" "}
-              bored
-            </label>
+            <label htmlFor="bored"> bored</label>
           </div>
           <div className="negative worried">
             <input
@@ -224,10 +173,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="worried"
               onChange={(e) => onEditField("worried", e.target.checked)}
             />
-            <label className="negative worried" htmlFor="worried">
-              {" "}
-              worried
-            </label>
+            <label htmlFor="worried"> worried</label>
           </div>
           <div className="negative meh">
             <input
@@ -235,10 +181,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="meh"
               onChange={(e) => onEditField("meh", e.target.checked)}
             />
-            <label className="negative meh" htmlFor="meh">
-              {" "}
-              meh
-            </label>
+            <label htmlFor="meh"> meh</label>
           </div>
           <div className="negative overwhelmed">
             <input
@@ -246,10 +189,7 @@ const Feel = ({ activeEntry, onUpdateEntry }) => {
               value="overwhelmed"
               onChange={(e) => onEditField("overwhelmed", e.target.checked)}
             />
-            <label className="negative overwhelmed" htmlFor="overwhelmed">
-              {" "}
-              overwhelmed
-            </label>
+            <label htmlFor="overwhelmed"> overwhelmed</label>
           </div>
         </div>
       </div>
