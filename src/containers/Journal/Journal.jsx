@@ -17,27 +17,27 @@ function Journal() {
       moodLevel: 50,
       busyLevel: 50,
       feelings: [
-        // { name: "excited", checked: false },
-        // { name: "joyful", checked: false },
-        // { name: "amazed", checked: false },
-        // { name: "grateful", checked: false },
-        // { name: "accomplished", checked: false },
-        // { name: "thankful", checked: false },
-        // { name: "proud", checked: false },
-        // { name: "productive", checked: false },
-        // { name: "active", checked: false },
-        // { name: "relaxed", checked: false },
-        // { name: "calm", checked: false },
-        // { name: "optimistic", checked: false },
-        // { name: "chilled", checked: false },
-        // { name: "supported", checked: false },
-        // { name: "sad", checked: false },
-        // { name: "nervous", checked: false },
-        // { name: "impatent", checked: false },
-        // { name: "bored", checked: false },
-        // { name: "worried", checked: false },
-        // { name: "meh", checked: false },
-        // { name: "overwhelmed", checked: false },
+        // { name: "excited", value: false },
+        // { name: "joyful", value: false },
+        // { name: "amazed", value: false },
+        // { name: "grateful", value: false },
+        // { name: "accomplished", value: false },
+        // { name: "thankful", value: false },
+        // { name: "proud", value: false },
+        // { name: "productive", value: false },
+        // { name: "active", value: false },
+        // { name: "relaxed", value: false },
+        // { name: "calm", value: false },
+        // { name: "optimistic", value: false },
+        // { name: "chilled", value: false },
+        // { name: "supported", value: false },
+        // { name: "sad", value: false },
+        // { name: "nervous", value: false },
+        // { name: "impatent", value: false },
+        // { name: "bored", value: false },
+        // { name: "worried", value: false },
+        // { name: "meh", value: false },
+        // { name: "overwhelmed", value: false },
       ],
     };
     setEntries([newEntry, ...entries]);
@@ -50,22 +50,10 @@ function Journal() {
       }
       return entry;
     });
-    console.log(updatedEntry);
+    console.log(updatedEntriesArray);
 
     setEntries(updatedEntriesArray);
   };
-
-  // const handleChange = (e) => {
-  //   const value = e.target.value;
-  //   const tempFeelings = entries.feelings.map((entry, feeling) => {
-  //     if (entry.id === activeEntry && feeling.value === value) {
-  //       return { ...feeling, checked: true };
-  //     }
-  //     return feeling;
-  //   });
-
-  //   setEntries({ ...entries, feelings: tempFeelings });
-  // };
 
   const onDeleteEntry = (idToDelete) => {
     setEntries(entries.filter((entry) => entry.id !== idToDelete));
@@ -90,7 +78,6 @@ function Journal() {
         <JournalForm
           activeEntry={getActiveEntry()}
           onUpdateEntry={onUpdateEntry}
-          // handleChange={handleChange}
         />
       </div>
     </div>
