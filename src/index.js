@@ -21,7 +21,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="tasks" element={<Tasks />} />
-        <Route path="habits" element={<Habit />} />
+        <Route index element={<Habit />} />
       </Route>
       {/* TODO: Replace with actual 404 page */}
       <Route path="*" element={<Error404 />} />

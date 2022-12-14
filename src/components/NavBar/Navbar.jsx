@@ -27,11 +27,7 @@ const Navbar = ({ onButtonClick }) => {
         >
           Tasks
         </NavButtons>
-        <NavButtons
-          icon={"edit"}
-          linkTo={"habits"}
-          onButtonClick={onButtonClick}
-        >
+        <NavButtons icon={"edit"} linkTo={"/"} onButtonClick={onButtonClick}>
           Habits
         </NavButtons>
       </nav>
