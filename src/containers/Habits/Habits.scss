@@ -1,0 +1,52 @@
+.habits-frame{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    height:900px
+}
+.habits-tab{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 900px;
+    background: linear-gradient(0deg, rgba(208, 188, 255, 0.05), rgba(208, 188, 255, 0.05)), #1C1B1F;
+    margin-left: 80px;
+    &__headline {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 8px 8px 30px;
+        gap: 10px;
+        height: 56px;
+      }
+}
+.habits-calendar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 900px;
+    background: #1C1B1F;
+    &__weekdays {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 99px;
+        padding: 10px 45px 10px 45px;
+        height: 56px;
+        position: absolute;
+        margin-left: 420px;
+      }
+}
+.day{
+    display: flex;
+    align-items: center;
+    color: #e8def8;
+    height: 34px;
+    width: 34px;
+}
+.h1-habit{
+    color: #e8def8;;
+    font-size: 17px;
+}
