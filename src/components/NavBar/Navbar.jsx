@@ -10,7 +10,7 @@ const Navbar = ({ onButtonClick }) => {
   return (
     <div className="navbar">
       <div className="navbar__icon">
-        <span class="material-icons">settings</span>
+        <span className="material-icons">settings</span>
       </div>
       <nav className="navbar__button-wrapper">
         <NavButtons
