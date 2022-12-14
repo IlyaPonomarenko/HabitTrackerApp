@@ -21,6 +21,7 @@ const JournalSidebar = ({
       <div className="journal-sidebar__entries-wrapper">
         {entries.map((entry) => (
           <div
+            key={Math.random() * 100}
             className={`journal-sidebar__entry-wrapper ${
               entry.id === activeEntry && "active"
             }`}
