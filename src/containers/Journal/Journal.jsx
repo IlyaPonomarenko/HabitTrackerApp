@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uuid from "react-uuid";
+import {v4 as uuid} from "uuid"
 import JournalSidebar from "../../components/JournalSidebar/JournalSidebar";
 import JournalForm from "../../components/JournalForm/JournalForm";
 import "./Journal.scss";

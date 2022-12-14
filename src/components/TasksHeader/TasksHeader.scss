@@ -1,1 +1,15 @@
 @use "../../utilities/variables/" as v;
+
+.tasks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  width: 100%;
+  padding: 20px 0;
+  &__h2 {
+    @include v.body-large;
+    font-weight: 400;
+    color: v.$color-on-surface-dark;
+  }
+}

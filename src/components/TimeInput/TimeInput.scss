@@ -1,0 +1,46 @@
+@use "../../utilities/variables/" as v;
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.time-input {
+  padding: 18px 24px 0 24px;
+  display: flex;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  &__number {
+    color-scheme: dark;
+    font-family: roboto;
+    font-size: 45px;
+    line-height: 52px;
+    width: 96px;
+    height: 72px;
+    padding: 9px 20px;
+    background-color: v.$color-secondary-container-dark;
+    color: v.$color-on-secondary-container-dark;
+    border: none;
+    border-radius: 8px;
+  }
+  &__span {
+    font-family: roboto;
+    font-size: 57px;
+    line-height: 64px;
+    color: v.$color-on-primary-container-dark;
+    padding: 0 5px;
+  }
+  &__label {
+    @include v.label-medium;
+    color: v.$color-secondary-dark;
+    width: 96px;
+  }
+}

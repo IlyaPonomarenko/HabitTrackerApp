@@ -1,0 +1,14 @@
+.habitGroup-title{
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 18px 16px 18px 30px;
+gap: 10px;
+width: 1360px;
+height: 56px;
+background: #302d38;
+}
+.h1-habit:focus-visible{
+outline: 2px solid #7f7694;
+border-bottom: 2px;
+}

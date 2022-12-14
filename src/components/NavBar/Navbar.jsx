@@ -3,7 +3,7 @@ import NavButtons from "../NavButtons/NavButtons";
 import "./Navbar.scss";
 
 /* 
-TODO: Create navButtons with a map that iterates through an array of addresses
+TODO: Create navButtons with a map that iterates through an array of web addresses
 */
 
 const Navbar = ({ onButtonClick }) => {

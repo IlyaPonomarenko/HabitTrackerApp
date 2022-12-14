@@ -17,8 +17,6 @@ const Button = ({
       ? "button--primary button"
       : variant === "text-only"
       ? "button--text-only button"
-      : variant === "delete"
-      ? "button--delete button"
       : "button";
   return (
     <button type={type} onClick={onButtonClick} className={variant}>
