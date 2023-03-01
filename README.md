@@ -27,5 +27,7 @@ $ npm start
   ![Preview of Habits](./src/assets/readme/Habits_tab.png)
 - Tasks tab
   ![Preview of Tasks](./src/assets/readme/Tasks_tab.png)
+- Journal tab
+  ![Preview of Journal](./src/assets/readme/Journal_tab.png)
 - Error page
-  ![Preview of Error404](.src/assest/readme/Error_page.png)
+  ![Preview of Error404](./src/assets/readme/Error_page.png)
